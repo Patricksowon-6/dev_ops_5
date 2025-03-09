@@ -12,3 +12,9 @@ jobs:
 
       - name: Build application
         run: make
+
+      - name: Upload built file
+        uses: actions/upload-artifact@v3
+        with:
+          name: my_program-artifact
+          path: my_program  # <-- Make sure this matches the output of your Makefile
